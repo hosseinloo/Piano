@@ -1,0 +1,140 @@
+* {
+    border: none !important;
+    padding: none !important;
+    margin: none !important; 
+    box-sizing: border-box !important;
+}
+
+body {
+    font-family: 'poppins';
+}
+
+h2 {
+    height: 100px;
+    text-shadow: 2px 2px 7px rgb(18, 255, 105);
+}
+
+.playing {
+    box-shadow: 0 0 1rem rgb(18, 255, 105);
+    border-color: rgb(18, 255, 105);
+    transform: scale(.95);
+    -webkit-transform: scale(.95);
+    -moz-transform: scale(.95);
+    -ms-transform: scale(.95);
+    -o-transform: scale(.95);
+}
+
+.keys {
+    position: relative;
+    height: 360px !important;
+    transition: all 0.1s ease-in-out;
+}
+
+.keys:hover .hints {
+    opacity: 1;
+}
+
+.hints {
+    opacity: 0;
+}
+
+
+.key-p {
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    -o-transition: all 0.1s;
+}
+
+.key {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.key-sharp {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+
+.sharp {
+    background-color: rgb(18, 18, 19);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 6%;
+    height: 60%;
+    margin: 0 10px;
+    border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    -ms-border-radius: 0 0 5px 5px;
+    -o-border-radius: 0 0 5px 5px;
+}
+
+.sharp span {
+ 
+     padding-bottom: 5px;
+     color: whitesmoke;
+}
+
+.space {
+    width: 4%;
+}
+.space-little {
+    width: 1%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    src: url('../../public/fonts/poppins.ttf');
+    font-family: 'poppins';
+};
+
+/* @media (min-width: 992px) {
+
+}
+
+@media (min-width: 1180px) {
+    
+}
+@media (min-width: 768px) {
+    
+}
+@media (min-width: 568px) {
+    
+} */
+
+

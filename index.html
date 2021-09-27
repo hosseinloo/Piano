@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="keywords" content="HTML5 , CSS , JavaScript , Bootstrap , piano , note , jquery , ES6 , Project , js , event, music">
+        <meta name="description" content="Create piano with javascript">
+        <meta http-equiv="author" content="Hossein Ghorbanloo">
+        <meta http-equiv="refresh" content="200 ">
+        <!-- End Meta Tags -->
+
+        <!-- Bootstrap CSS File -->
+        <link rel="stylesheet" href="./vendor/css/bootstrap/bootstrap.min.css">
+
+        <!-- Custom CSS File -->
+        <link rel="stylesheet" href="./src/css/index.css">
+
+        <!-- Title Info and Title Icon -->
+        <link rel="icon" href="./public/icons/title.png">
+        <link rel="apple-touch-icon" href="./public/icons/title.png">
+        <title>JS Piano Project</title>
+        <!--End Title Info and Title Icon  -->
+    </head>
+
+    <body>
+        <section id="piano" class="min-vh-100 bg-dark text-white">
+            <!-- Container -->
+            <div class="container-fluid">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-xl-7 col-lg-8 col-md-9 col-10 text-center">
+                        <!-- Title Project -->
+                        <h1 class="display-4 py-4 ">Piano With JavaScript</h1>
+
+                        <!-- Show Key Note -->
+                        <h2 id="note" class="display-1 mb-5"></h2>
+
+                        <!--All Piano Keys  -->
+                        <div class="row my-2 keys">
+                            <!-- Start white piano keys -->
+                            <div data-key="65" data-note="C"
+                                class="col key-p key bg-white text-dark rounded mx-1 justify-content-center align-items-end">
+                                <span class="hints">A</span>
+                            </div>
+
+                            <div data-key="83" data-note="D"
+                                class="col key-p key bg-white text-dark rounded mx-1 justify-content-center align-items-end">
+                                <span class="hints">S </span>
+                            </div>
+
+                            <div data-key="68" data-note="E"
+                                class="col key-p key bg-white text-dark rounded mx-1 justify-content-center align-items-end">
+                                <span class="hints">D</span>
+                            </div>
+
+                            <div data-key="70" data-note="F"
+                                class="col key-p key bg-white text-dark rounded mx-1 justify-content-center align-items-end">
+                                <span class="hints">F</span>
+                            </div>
+
+                            <div data-key="71" data-note="G"
+                                class="col key-p key bg-white text-dark rounded mx-1 justify-content-center align-items-end">
+                                <span class="hints">G</span>
+                            </div>
+
+                            <div data-key="72" data-note="A"
+                                class="col key-p key bg-white text-dark rounded mx-1 justify-content-center align-items-end">
+                                <span class="hints">H</span>
+                            </div>
+
+                            <div data-key="74" data-note="B"
+                                class="col key-p key bg-white text-dark rounded mx-1 justify-content-center align-items-end">
+                                <span class="hints">J</span>
+                            </div>
+
+                            <div data-key="75" data-note="C"
+                                class="col key-p key bg-white text-dark rounded mx-1 justify-content-center align-items-end">
+                                <span class="hints">K</span>
+                            </div>
+
+                            <div data-key="76" data-note="D"
+                                class="col key-p key bg-white text-dark rounded mx-1 justify-content-center align-items-end">
+                                <span class="hints">L</span>
+                            </div>
+
+                            <div data-key="186" data-note="E"
+                                class="col key-p key bg-white text-dark rounded mx-1 justify-content-center align-items-end">
+                                <span class="hints">;</span>
+                            </div>
+                            <!-- End white piano keys -->
+
+                            <!-- Start black piano keys -->
+                            <div class="key-sharp">
+                                <!-- WhiteSpace -->
+                                <div class="space-little"></div>
+                                <div class="space-little"></div>
+                                <!-- WhiteSpace -->
+
+                                <div data-key="87" data-note="C#" class="sharp key-p">
+                                    <span class="hints">W</span>
+                                </div>
+
+                                <div data-key="69" data-note="D#" class="sharp key-p">
+                                    <span class="hints">E</span>
+                                </div>
+
+                                <!-- WhiteSpace -->
+                                <div class="space"></div>
+                                <div class="space"></div>
+                                <!-- WhiteSpace -->
+
+                                <div data-key="84" data-note="F#" class="sharp key-p">
+                                    <span class="hints">T</span>
+                                </div>
+
+                                <div data-key="89" data-note="G#" class="sharp key-p">
+                                    <span class="hints">Y</span>
+                                </div>
+
+                                <div data-key="85" data-note="A#" class="sharp key-p">
+                                    <span class="hints">U</span>
+                                </div>
+
+                                <!-- WhiteSpace -->
+                                <div class="space"></div>
+                                <div class="space"></div>
+                                <!-- WhiteSpace -->
+
+                                <div data-key="79" data-note="C#" class="sharp key-p">
+                                    <span class="hints">O</span>
+                                </div>
+
+                                <div data-key="80" data-note="D#" class="sharp key-p">
+                                    <span class="hints">P</span>
+                                </div>
+
+                                <!-- WhiteSpace -->
+                                <div class="space-little"></div>
+                                <div class="space-little"></div>
+                                <!-- WhiteSpace -->
+                            </div>
+                            <!-- Start black piano keys -->
+                        </div>
+                        <!-- End All Keys -->
+                    </div>
+                </div>
+            </div>
+            <!-- End Container -->
+
+            <!-- Start Piano Note Songs -->
+            
+            <audio data-key="65" src="./public/audios/key01.ogg"></audio>
+            <audio data-key="83" src="./public/audios/key02.ogg"></audio>
+            <audio data-key="68" src="./public/audios/key03.ogg"></audio>
+            <audio data-key="70" src="./public/audios/key04.ogg"></audio>
+            <audio data-key="71" src="./public/audios/key05.ogg"></audio>
+            <audio data-key="72" src="./public/audios/key06.ogg"></audio>
+            <audio data-key="74" src="./public/audios/key07.ogg"></audio>
+            <audio data-key="75" src="./public/audios/key08.ogg"></audio>
+            <audio data-key="76" src="./public/audios/key09.ogg"></audio>
+            <audio data-key="186" src="./public/audios/key10.ogg"></audio>
+            <audio data-key="87" src="./public/audios/key11.ogg"></audio>
+            <audio data-key="69" src="./public/audios/key12.ogg"></audio>
+            <audio data-key="84" src="./public/audios/key13.ogg"></audio>
+            <audio data-key="89" src="./public/audios/key14.ogg"></audio>
+            <audio data-key="85" src="./public/audios/key15.ogg"></audio>
+            <audio data-key="79" src="./public/audios/key16.ogg"></audio>
+            <audio data-key="80" src="./public/audios/key17.ogg"></audio>
+            <!-- End Piano Note Songs -->
+        </section>
+
+        <!-- JS Custom File -->
+        <script src="./src/js/index.js"></script>
+    </body>
+</html>
